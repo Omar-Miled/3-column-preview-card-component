@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+:root {
+  --primary-color-400: hsl(31, 77%, 52%);
+  --secondary-color-700: hsl(184, 100%, 22%);
+  --tertiary-color-900: hsl(179, 100%, 13%);
+
+  --neutral-color-100-tp: hsla(0, 0%, 100%, 0.75);
+  --neutral-color-200: hsl(0, 0%, 95%);
+
+  --ff-basic: 'Lexend Deca', sans-serif;
+  --ff-accent: 'Big Shoulders Display', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+.service {
+  --content-padding: 2.5rem;
+  --content-margin: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 4rem var(--content-margin);
+}
+.sedans {
+  background-color: var(--primary-color-400);
+  padding: var(--content-padding);
+}
+.suvs {
+  background-color: var(--secondary-color-700);
+  padding: var(--content-padding);
+}
+.luxury {
+  background-color: var(--tertiary-color-900);
+  padding: var(--content-padding);
+}
+.car-img {
+  margin-bottom: var(--content-margin);
+}
+.car-type {
+  color: var(--neutral-color-200);
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  font-size: 3rem;
+  display: inline-block;
+  margin-bottom: var(--content-margin);
+}
+.service-description {
+  color: var(--neutral-color-100-tp);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-basic);
+  line-height: 1.6rem;
+  margin-bottom: var(--content-margin);
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: var(--ff-basic);
+  font-weight: var(--fw-regular);
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.7rem 2.1rem;
+}
+button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.sedan-button {
+  border: 1px solid var(--primary-color-400);
+  color: var(--primary-color-400)
+}
+.suv-button {
+  border: 1px solid var(--secondary-color-700);
+  color: var(--secondary-color-700)
+}
+.luxury-button {
+  border: 1px solid var(--tertiary-color-900);
+  color: var(--tertiary-color-900)
+}
+
+@media (min-width: 1000px) {
+  .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 4rem var(--content-margin);
+    max-width: 52.5rem;
+  }
+  .car-type {
+    font-size: 2.3rem;
+    margin-bottom: 1rem; 
+  }
+  .service-description {
+    font-size: 0.885rem;
+    color: hsla(0, 0%, 100%, 0.6);;
+    margin-bottom: 5rem;
+    line-height: 1.5rem;
+  }
+  button {
+    font-size: 0.925rem;
+    padding: 0.8rem 1.62rem;
+
+  }
+}
